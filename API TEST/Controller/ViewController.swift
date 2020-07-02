@@ -25,9 +25,9 @@ class ViewController: UIViewController {
     
     
     
-//MARK: API
-  let Api = "https://coronavirus-19-api.herokuapp.com/countries/egypt"
-    let Api2:String = "https://dog.ceo/api/breeds/image/random"
+//MARK:- API
+  let Api = "https://coronavirus-19-api.herokuapp.com/countries/USA"
+    let Api2 = "https://dog.ceo/api/breeds/image/random"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,10 +37,10 @@ class ViewController: UIViewController {
             
             switch response {
             case .success(let APIcall):
-                self.caseslb.text! = "\((APIcall!.cases))"
-                self.deathlabel.text! = "\((APIcall!.deaths))"
-                self.countrylb.text! = "\((APIcall!.country))"
-                self.cirtiacllb.text! = "\((APIcall!.critical))"
+                self.caseslb.text! = "CASES :  \((APIcall!.cases))"
+                self.deathlabel.text! = "Deathes:  \((APIcall!.deaths))"
+                self.countrylb.text! = "Country Name:   \((APIcall!.country))"
+                self.cirtiacllb.text! = "Critiacl :  \((APIcall!.critical))"
                 
             case .failure(_):
                 print("Error")
