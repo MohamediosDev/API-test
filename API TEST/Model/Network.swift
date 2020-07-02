@@ -23,6 +23,7 @@ class APIclass: Decodable {
        let testsPerOneMillion: Int
 }
 class DOG: Decodable {
-    let message: URL
-    let status: String
+       let message: URL
+       let status: String
+    
 }
